@@ -1,0 +1,37 @@
+/*-------------------------------------------------------*\
+    Links
+/*-------------------------------------------------------*/
+
+a {
+    
+    color: $primary-color;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+
+    &:hover {
+
+        color:  $primary-color-darken;
+        text-decoration: underline;
+
+    }
+
+    &:active {
+
+        color: darken( $primary-color-darken, 50% );
+
+    }
+
+    &:focus {
+
+        color: darken( $primary-color-darken, 50% );
+
+    }
+
+    // &:focus {
+
+    //     outline: 2px solid $primary-color;
+        
+    // }
+
+}

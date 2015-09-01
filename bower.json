@@ -1,0 +1,21 @@
+{
+  "name": "bower-libs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/juanbrujo/simple-grunt-workflow",
+  "authors": [
+    "Jorge Epuñan"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "detectizr": "latest",
+    "modernizr": "latest",
+    "normalize.css": "latest"
+  }
+}

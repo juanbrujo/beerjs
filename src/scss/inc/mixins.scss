@@ -1,0 +1,110 @@
+// JUST FOR DEBUGGING
+@mixin out($color:red)
+{
+  outline:1px solid $color;
+}
+
+//  MIXINS 
+@mixin escondetxt($where:-9999px)
+{
+  text-indent: $where;
+  overflow: hidden;
+}
+@mixin zero()
+{
+  margin: 0;
+  padding: 0;
+}
+@mixin box-shadow($arguments)
+{
+  box-shadow: $arguments;
+}
+@mixin gradient-vertical($startColor: #1e5799, $endColor: #7db9e8)
+{
+  background: $endColor;
+  background: linear-gradient(to bottom,  $startColor 0%,$endColor 100%);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', EndColorStr='#{$endColor}', GradientType=0)";
+}
+@mixin gradient-horizontal($startColor: #1e5799, $endColor: #7db9e8)
+{
+  background: $endColor;
+  background: linear-gradient(to right, $startColor, $endColor);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', EndColorStr='#{$endColor}', GradientType=1)";
+}
+@mixin background-size($arguments)
+{
+  -webkit-background-size: $arguments;
+  background-size: $arguments;
+}
+@mixin border-radius($radius)
+{
+  border-radius: $radius;
+}
+@mixin opacity($opacity:0.5)
+{
+  opacity: $opacity;
+  $opperc: $opacity * 100;
+  -ms-filter: #{"progid:DXImageTransform.Microsoft.Alpha(opacity=${opperc})"};
+  filter: #{"alpha(opacity=${opperc})"};
+}
+@mixin transform-origin($arguments)
+{
+  transform-origin: $arguments;
+}
+@mixin transform($arguments)
+{
+  transform: $arguments;
+}
+@mixin transition-delay($time)
+{
+  transition-delay: $time;
+}
+@mixin transition($arguments)
+{
+  transition: $arguments;
+}
+@mixin animation-delay($time)
+{
+  -webkit-animation-delay: $time;
+  animation-delay: $time;
+}
+@mixin animation($arguments)
+{
+  -webkit-animation: $arguments;
+  animation: $arguments;
+}
+@mixin perspective($arguments)
+{
+  -webkit-perspective: $arguments;
+  perspective: $arguments;
+}
+@mixin columns($arguments)
+{
+  -webkit-column-count: $arguments;
+  -moz-column-count: $arguments;
+  column-count: $arguments;
+}
+//- Centrar Bloque
+@mixin block-center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+//- Limpiar Bloque
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+//- Compass Mixins
+// Create a named animation sequence that can be applied to elements later.
+//
+//     $name    - The name of your animation.
+//     @content - The keyframes of the animation.
+@mixin keyframes($name) {
+    @keyframes #{$name} { @content; }
+}
