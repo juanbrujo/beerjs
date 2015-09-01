@@ -1,14 +1,11 @@
 {
-  "name": "simple-grunt-workflow",
-  "version": "0.2.5",
-  "homepage": "http://www.csslab.cl/2014/04/07/automatizacion-de-tareas-para-proyectos-en-front-end/",
-  "bugs": {
-    "url": "https://github.com/juanbrujo/simple-grunt-workflow/issues"
-  },
+  "name": "beerjs-santiago",
+  "version": "1.0.0",
+  "homepage": "http://www.beerjs.cl/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/juanbrujo/simple-grunt-workflow"
+    "url": "https://github.com/juanbrujo/beerjs-santiago"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
