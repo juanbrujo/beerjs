@@ -1,163 +1,213 @@
-<!--
-ATTENTION!
-as this is a base theme for a BeerJS meetup, replace XXXXX when needed
--->
+
 <!doctype html>
-<html lang="es">
-  <head>
+<html>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>BeerJS XXXXX</title>
-    <meta name="description" content="Encuentro javascripters + cerveceros en XXXXX">
-    <meta property="og:title" content="BeerJS XXXXX">
+
+    <title>BeerJS Santiago Edición Agosto 2022</title>
+
+    <meta name="description" content="Encuentro javascripters + cerveceros en Santiago.">
+    <meta property="og:title" content="BeerJS Santiago">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@beerjssantiago" />
+    <meta name="twitter:creator" content="@beerjssantiago" />
+    <meta name="twitter:title" content="BeerJS Santiago - Edición Agosto 2022" />
+    <meta name="twitter:description" content="Encuentro javascripters + cerveceros en Santiago" />
+    <meta name="twitter:image" content="assets/images/social.png">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="BeerJS Santiago - Edición Agosto 2022">
     <meta property="og:type" content="blog">
-    <meta property="og:url" content="http://www.beerjs.XXXXX">
-    <meta property="og:image" content="http://www.beerjs.XXXXX/assets/images/social.png">
-    <meta property="og:site_name" content="BeerJS.XXXXX">
-    <meta property="og:description" content="Encuentro javascripters + cerveceros en XXXXX">
-    <link href="http://www.beerjs.XXXXX/assets/images/favicon.ico" rel="icon" type="image/x-icon">
+    <meta property="og:url" content="//www.beerjs.cl">
+    <meta property="og:image" content="assets/images/social.png">
+    <meta property="og:site_name" content="BeerJS.cl">
+    <meta property="og:description" content="Encuentro javascripters + cerveceros en Santiago">
+
+    <link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/maibock.css">
-  </head>
-  <body>
-    <header class="hero" role="header">
-      <div id="bubbles"></div>
-      <div class="container">
-        <div class="row">
-          <div class="intro">
-            <h1>Beer<span>JS</span></h1>
-            <h2>Encuentro<br> JavaScripters <span>+</span> cerveceros<br> en XXXXX</h2>
-          </div>
-          <div class="mug">
-            <div class="bubbles"></div>
-            <div class="beer"></div>
-            <div class="handle"></div>
-            <div class="shadow"></div>
-            <div class="js">JS</div>
-          </div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+</head>
+<body>
+    <header class="hero" role="heading">
+        <div class="container">
+            <div class="row">
+                <div class="intro">
+                    <h1>Beer<span>JS</span></h1>
+                    <h2>Encuentro<br> JavaScripters <span>+</span> cerveceros<br> en Santiago</h2>
+                </div>
+                <div class="mug">
+                    <div class="bubbles"></div>
+                    <div class="beer"></div>
+                    <div class="handle"></div>
+                    <div class="shadow"></div>
+                    <div class="js">JS</div>
+                </div>
+            </div>
         </div>
-      </div>
+        <canvas id='bubbling'></canvas>
+        <div class="new">¡Nueva edición!<br>Agosto 2022</div>
     </header>
 
-    <div class="section features" data-scroll="5" role="features">
-      <div class="container">
-        <div class="row u-center">
-          <h2>¿Qué?</h2>
-          <div class="col w-6">
-            <p class="headline">BeerJS es un encuentro de desarrolladores apasionados por crear código <b>JavaScript</b> día-a-día y que disfrutan de una buena <b>cerveza</b>. </p>
-          </div>
-          <div class="col w-6">
-            <p class="headline">Se realiza mundialmente, por ciudades, y cada XXXXX días le toca a XXXXX albergar una propia en un bar/oficina central y accesible a todos los asistentes.</p>
-          </div>
+    <div class="section features" data-scroll="5" role="feature">
+        <div class="container">
+            <div class="row u-center">
+                <h2>¿Qué?</h2>
+                <div class="col w-6">
+                    <p class="headline">BeerJS es un encuentro de desarrolladores apasionados por crear código <b>JavaScript</b> día-a-día y que disfrutan de una buena <b>cerveza</b>. </p>
+                </div>
+                <div class="col w-6">
+                    <p class="headline">Se realiza mundialmente, por ciudades, y cada 30 días le toca a Santiago albergar una propia en un lugar accesible a todos los asistentes.</p>
+                </div>
+            </div>
+            <div class="row u-center">
+                <div class="col w-4">
+                    <h3>Juntarse</h3>
+                    <p>Somos humanos que escribimos código que sólo las máquinas interpretan. Pero queremos volver a las raíces para sociabilizar por un par de horas. Salir de las oficinas, casas o cuevas donde se encuentren y compartir los problemas que nos dan los proyectos.</p>
+                </div>
+                <div class="col w-4">
+                    <h3>Compartir</h3>
+                    <p>Ya en el lugar, todos los inscritos tendrán la oportunidad de compartir sobre un tema definido para cada encuentro. Podrán por breves minutos mostrar su experiencia para que todos opinemos y exploremos lo presentado.</p>
+                </div>
+                <div class="col w-4">
+                    <h3>Beber y comer</h3>
+                    <p>Mientras tanto probaremos diferentes tipos de cervezas traídas por los mismos asistentes y la comida será definida y auspiciada según el lugar.</p>
+                </div>
+            </div>
         </div>
-        <div class="row u-center">
-          <div class="col w-4">
-            <h3>Juntarse</h3>
-            <p>Somos humanos que escribimos código que sólo las máquinas interpretan. Pero queremos volver a las raíces para sociabilizar por un par de horas. Salir de las oficinas, casas o cuevas donde se encuentren y compartir los problemas que nos dan los proyectos.</p>
-          </div>
-          <div class="col w-4">
-            <h3>Compartir</h3>
-            <p>Ya en el lugar, todos los inscritos tendrán la oportunidad de compartir sobre un tema definido para cada encuentro. Podrán por breves minutos mostrar su experiencia para que todos opinemos y exploremos lo presentado.</p>
-          </div>
-          <div class="col w-4">
-            <h3>Beber y comer</h3>
-            <p>Mientras tanto probaremos diferentes tipos de cervezas traídas por los mismos asistentes y la comida será definida y auspiciada según el lugar.</p>
-          </div>
-        </div>
-      </div>
     </div>
+
 
     <div class="section u-grey-b sponsors" role="sponsors">
-      <div class="container">
-        <div class="row u-center">
-          <h2>Auspicios</h2>
-          <h3>¿Te gustaría apoyar <b>BeerJS</b>? </h3>
+        <div class="container">
+            <div class="row u-center">
+                <h2>Auspicios</h2>
+                <h3>¿Te gustaría apoyar <b>BeerJS</b>? </h3>
+            </div>
+            <div class="row u-center">
+                <div class="col w-4">
+                    <p><b>¿Buscas desarrolladores para tu empresa?</b> En BeerJS se juntan los mejores de la ciudad, auspicia un encuentro en tu oficina y conócelos.</p>
+                </div>
+                <div class="col w-4">
+                    <p><b>¿Eres parte de una empresa donde trabajan con JavaScript?</b> Auspicia un encuentro y deja que tus desarrolladores compartan con nosotros.</p>
+                </div>
+                <div class="col w-4">
+                    <p><b>¿Tienes una empresa cool?</b> Muéstrala auspiciando un encuentro y conversemos cómo enfrentas tus proyectos.</p>
+                </div>
+            </div>
+            <div class="row u-center">
+                <p><a href="mailto:salud@beerjs.cl?subject=Auspicio BeerJS" class="button-contact">Escríbenos</a></p>
+            </div>
         </div>
-        <div class="row u-center">
-          <div class="col w-4">
-            <p>¿Buscas desarrolladores para tu empresa? En BeerJS se juntan los mejores de la ciudad, auspicia un encuentro en tu oficina y conócelos.</p>
-          </div>
-          <div class="col w-4">
-            <p>¿Eres parte de una empresa donde trabajan con JavaScript? Auspicia un encuentro y deja que tus desarrolladores compartan con nosotros.</p>
-          </div>
-          <div class="col w-4">
-            <p>¿Tienes una empresa cool? Muéstrala auspiciando un encuentro y conversemos cómo enfrentas tus proyectos.</p>
-          </div>
-        </div>
-        <div class="row u-center">
-          <p><a href="mailto:XXXXX?subject=Auspicio BeerJS" class="button-contact">Escríbenos</a></p>
-        </div>
-      </div>
     </div>
 
-    <div class="section where" data-scroll="5" role="location">
-      <div class="container">
-        <div class="row u-center">
-          <h2>Próximo Encuentro: </h2>
-          <p class="headline">Miércoles XXXXX de XXXXX | Bar XXXXX</p>
+    <section class="section where" data-scroll="5" role="address">
+        <div class="container">
+            <div class="row u-center">
+                <h2>Próximo Encuentro: </h2>
+                <p class="headline">Jueves 4 de Agosto 2022</p>
+            </div>
+            <div class="row u-center">
+                <p><a href="https://guestlist.co/events/722433" target="_blank" class="button-register">¡Registrate!</a></p>
+            </div>
+            <div class="row">
+                <div class="map">
+                    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+                    <div style="overflow:hidden;height:300px;width:100%;">
+                        <div id="map_canvas" style="height:300px;width:100%;"></div>
+                        <style>#map_canvas img{max-width:none!important;background:none!important}</style>
+                    </div>
+                    <script>
+                    var mymap = L.map('map_canvas').setView([-33.416309, -70.598763], 15);
+                    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                        attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
+                        tileSize: 512,
+					    maxZoom: 18,
+                        zoomOffset: -1,
+					    id: 'mapbox/streets-v11',
+                        accessToken: 'sk.eyJ1IjoibGdhdGljYSIsImEiOiJjanhkcW12dmswZ3hmM3BvOWJsN29nZXgwIn0.rDaX9VwIa3HTbkMBRqYM0g'
+                    }).addTo(mymap);
+                    var marker = L.marker([-33.416309, -70.598763]).addTo(mymap);
+                    marker.bindPopup('eClass<br>Carmencita 20, Las Condes').openPopup();
+                    </script>
+                </div>
+            </div>
         </div>
-        <div class="row u-center">
-          <div class="col w-4">
-            <h2>Tema: XXXXX</h2>
-            <p>Quienes deseen podrán XXXXX</p>
-          </div>
-          <div class="col w-4">
-            <h2>Requisito: traer cerveza</h2>
-            <p>Para beber, cada asistente tendrá que <b>traer un pack de la cerveza que le gustaría compartir</b>.</p>
-          </div>
-          <div class="col w-4">
-            <h2>Auspicia:</h2>
-            <p class="XXXXX"><a href="https://XXXXX.com/" target="_blank">XXXXX</a></p>
-          </div>
-        </div>
-        <div class="row u-center">
-          <p><a href="#" class="button-register">Pronto Inscripciones <br>Cupos limitados</a></p>
-        </div>
-      </div>
-    </div>
+    </section>
 
     <div class="section u-grey-b who" role="organizers">
-      <div class="container">
-        <div class="row u-center">
-          <h2>Organizadores</h2>
+        <div class="container">
+            <div class="row u-center">
+                <h2>Organiza</h2>
+            </div>
+            <div class="row u-center">
+                <div class="col w-2"></div>
+                <div class="col w-4">
+                    <img src="https://avatars.githubusercontent.com/u/362186?v=4" alt="Victor San Martin" class="avatar">
+                    <h3>Victor San Martin <a href="https://www.twitter.com/questchile" class="tw" target="_blank">Twitter</a></h3>
+                    <p>Subgerente Tecnología en eClass.</p>
+                </div>
+                <div class="col w-4">
+                    <img src="https://avatars.githubusercontent.com/u/362186?v=4" alt="Jorge Epuñan H." class="avatar">
+                    <h3>Jorge Epuñan H. <a href="https://www.twitter.com/csslab" class="tw" target="_blank">Twitter</a></h3>
+                    <p>Proud BeerJS organizer || MutableJS && Huemul Core Developer</p>
+                </div>
+                <div class="col w-2"></div>
+            </div>
         </div>
+    </div>
+
+    <div class="section footer" role="group">
         <div class="row u-center">
-          <div class="col w-2"></div>
-          <div class="col w-4">
-            <img src="https://placehold.co/300" alt="XXXXX" class="avatar">
-            <h3>XXXXX <a href="https://www.twitter.com/XXXXX" class="tw" target="_blank">Twitter</a></h3>
-            <p>XXXXX. XXXXX.</p>
-          </div>
-          <div class="col w-4">
-            <img src="https://placehold.co/300" alt="XXXXX" class="avatar">
-            <h3>XXXXX <a href="https://www.twitter.com/XXXXX" class="tw" target="_blank">Twitter</a></h3>
-            <p>XXXXX. XXXXX.</p>
-          </div>
-          <div class="col w-2"></div>
+            <h2>Ediciones Anteriores</h2>
         </div>
-      </div>
+        <div class="diy-slideshow">
+            <figure class="show">
+                <img src="https://user-images.githubusercontent.com/362186/146093715-eed86275-39a8-4b95-b32e-d64ec083c581.jpg" width="100%" />
+                <figcaption>Diciembre 2021 | Bar ¡Ay Mi Madre!</figcaption>
+            </figure>
+            <figure>
+                <img src="https://user-images.githubusercontent.com/362186/143323901-3fbaae6b-2f9e-4ab9-9f77-e9a84522190f.png" width="100%" />
+                <figcaption>Marzo 2020 | eClass</figcaption>
+            </figure>
+            <figure>
+                <img src="https://user-images.githubusercontent.com/362186/74185445-6d55da80-4c27-11ea-9008-2267ac08eafb.jpg" width="100%" />
+                <figcaption>Febrero 2020 | Dealsyte</figcaption>
+            </figure>
+            <figure>
+                <img src="https://user-images.githubusercontent.com/362186/66165714-bf4c7b00-e60b-11e9-9026-eb10281490dd.jpg" width="100%" />
+                <figcaption>Octubre 2019 | eClass</figcaption>
+            </figure>
+            <span class="prev">&laquo;</span>
+            <span class="next">&raquo;</span>
+        </div>
     </div>
 
     <footer class="section footer" role="footer">
-      <div class="container">
-        <div class="row u-center">
-          <div class="col w-1"></div>
-          <div class="col w-6">
-            <p><b>BeerJS</b> ayuda a crear espacios sociales que fortalezcan comunidades alrededor del <i>software</i>. No es requerimiento alguno consumir alcohol para participar.</p>
-            <p><a href="http://es.confcodeofconduct.com/" target="_blank" class="code-conduct">Código de Conducta</a></p>
-          </div>
-          <div class="col w-1"></div>
-          <div class="col w-3">
-            <p>Sigue: <a href="https://twitter.com/intent/follow?original_referer=&screen_name=XXXXX&tw_p=followbutton&variant=2.0" target="_blank" twitter-followme lang="es">@XXXXX</a></p>
-            <p>Participa, aporta:</p>
-            <p class="slack"><a href="XXXXX" target="_blank">Slack</a></p>
-          </div>
-          <div class="col w-1"></div>
+        <div class="container">
+            <div class="row u-center">
+                <div class="col w-1"></div>
+                <div class="col w-6">
+                    <p><b>BeerJS</b> ayuda a crear espacios sociales que fortalezcan comunidades alrededor del <i>software</i>. No es requerimiento alguno consumir alcohol para participar.</p>
+                    <p><a href="https://es.confcodeofconduct.com/" target="_blank" class="code-conduct">Código de Conducta</a></p>
+                </div>
+                <div class="col w-1"></div>
+                <div class="col w-3">
+                    <p>Sigue: <a href="https://twitter.com/intent/follow?original_referer=&screen_name=BeerJSSantiago&tw_p=followbutton&variant=2.0" target="_blank" twitter-followme lang="es">@BeerJSSantiago</a></p>
+                    <p><b>devsChile</b> grupo oficial:</p>
+                    <p class="slack"><a href="https://www.devschile.cl/" target="_blank">Slack</a></p>
+                </div>
+                <div class="col w-1"></div>
+            </div>
         </div>
-      </div>
     </footer>
 
     <script src="assets/js/indianpaleale.js"></script>
-  </body>
+</body>
 </html>
