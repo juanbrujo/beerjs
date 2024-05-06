@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1c0fc72b-c0e0-4457-85a6-46bc8c071ed6" name="Default Changelist" comment="backport fixes from 4.x" />
+    <list id="ba49ce02-aefd-4739-84b5-84f77ff32906" name="chore: restructure build commands" comment="chore: restructure build commands&#10;&#10;- move dtslint (checkTypes) away from Gruntfile.js&#10;  (as it disturbs debugging `grunt`)&#10;  and call it directly as npm-script in travis-ci&#10;- re-group task definition in Gruntfile.js&#10;- use a multi-job travis build to&#10;  run linting, format, dtslint and tests&#10;  in parallel&#10;- run only &quot;npm test&quot; on appveyor&#10;- rename Grunt-tasks for be more descriptive&#10;- SAUCE_USERNAME is not a secret variable anymore&#10;  it can be easily guessed anyway and the&#10;  [secure] value messes up with a lot of the&#10;  log output">
+      <changelist_data name="Nils Knappmeier" email="github@knappi.org" date="1575199613000" />
+    </list>
+    <list id="643b7f65-352f-4811-900d-907687a53d96" name="chore: restructure build commands-2" comment="chore: restructure build commands&#10;&#10;- move dtslint (checkTypes) away from Gruntfile.js&#10;  (as it disturbs debugging `grunt`)&#10;  and call it directly as npm-script in travis-ci&#10;- re-group task definition in Gruntfile.js&#10;- use a multi-job travis build to&#10;  run linting, format, dtslint and tests&#10;  in parallel&#10;- run only &quot;npm test&quot; on appveyor&#10;- rename Grunt-tasks for be more descriptive&#10;- SAUCE_USERNAME is not a secret variable anymore&#10;  it can be easily guessed anyway and the&#10;  [secure] value messes up with a lot of the&#10;  log output">
+      <changelist_data name="Nils Knappmeier" email="github@knappi.org" date="1575199613000" />
+    </list>
+    <list id="936d8342-917f-4d85-9b72-e2d78c957313" name="chore: update components/handlebars package.json on release" comment="chore: auto-update package.json for components/handlebars.js when releasing&#10;&#10;- see components/handlebars.js#23 for details">
+      <changelist_data name="Nils Knappmeier" email="github@knappi.org" date="1546386749000" />
+    </list>
+    <list id="35c2ca72-008e-4124-aae9-be2100fc21cc" name="fix: use &quot;logger&quot; instead of console.error" comment="fix: use &quot;logger&quot; instead of console.error&#10;&#10;... to be graceful with older browser without &quot;console&quot;">
+      <changelist_data name="Nils Knappmeier" email="github@knappi.org" date="1578672323000" />
+    </list>
+    <list id="98127561-5ed7-42e7-b0cb-fcd55250ebc6" name="Revert &quot;#1056 Fixed grammar for nested raw blocks&quot;" comment="Revert &quot;#1056 Fixed grammar for nested raw blocks&quot;&#10;&#10;This reverts commit 868ef4b3" />
+    <list id="7f742c9a-80d7-46b3-962b-c5e574a32e56" name="Revert &quot;Escape = in HTML content&quot;" comment="Revert &quot;Escape = in HTML content&quot;&#10;&#10;This reverts commit 1c863e34, a change that was illegal in a patch (by semver semantics).&#10;&#10;see #1489" />
+    <list id="c206671e-7b49-4ddc-882c-aa751f2b7e13" name="Revert &quot;fix: gracefully handle read-only &quot;column&quot;-property of the Error class&quot;" comment="Revert &quot;fix: gracefully handle read-only &quot;column&quot;-property of the Error class&quot;&#10;&#10;This reverts commit 725986da" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="handlebars.js" />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="4.x" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="kpdecker &lt;kpdecker@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="harden-security-checks" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="git://github.com/mustache/spec.git" />
+        <option value="git@github.com:wycats/handlebars.js.git" />
+      </set>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1QARCIauHVzJYgMe0Cm0cBqKv8h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/dist/cjs/handlebars/compiler/compiler.js" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552772008258" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript&#10;TEXT&#10;Handlebars" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.1" />
+    <property name="js.buildTools.grunt.grunt-cli.package" value="$PROJECT_DIR$/node_modules/grunt-cli" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
+    <property name="js.introduce.parameter.generate.optional" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/handlebars/internal" />
+      <recent name="$PROJECT_DIR$/tasks/task-tests" />
+      <recent name="$PROJECT_DIR$/tasks/util" />
+      <recent name="$PROJECT_DIR$/tasks/util-test" />
+      <recent name="$PROJECT_DIR$/spec/vendor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tasks/util" />
+      <recent name="$PROJECT_DIR$/tasks" />
+      <recent name="$PROJECT_DIR$/integration-testing/webpack-test" />
+      <recent name="$PROJECT_DIR$/integration-testing/webpack-babel-test" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="splice" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Grunt.js.run test">
+    <configuration name="runner.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/spec/env/runner.js" working-dir="$PROJECT_DIR$/spec/env">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_10.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/scratch_10.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_2.es6" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.es6" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_5.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt">
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="run test" type="js.build_tools.grunt">
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v10.18.0/bin/node" />
+      <gruntfile value="$PROJECT_DIR$/Gruntfile.js" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="js.build_tools.gulp" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="run task tests" type="mocha-javascript-test-runner">
+      <node-interpreter>$USER_HOME$/.nvm/versions/node/v10.16.3/bin/node</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory>$PROJECT_DIR$/tasks/task-tests</test-directory>
+      <recursive>false</recursive>
+      <method v="2" />
+    </configuration>
+    <configuration name="security issues.GH-1495: Prevent Remote Code Execution via constructor.should not allow constructors to be accessed" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/spec/security.js</test-file>
+      <test-names>
+        <name value="security issues" />
+        <name value="GH-1495: Prevent Remote Code Execution via constructor" />
+        <name value="should not allow constructors to be accessed" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="utils/git" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>$USER_HOME$/.nvm/versions/node/v10.16.3/bin/node</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/tasks/task-tests/git.test.js</test-file>
+      <test-names>
+        <name value="utils/git" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="utils/git.the &quot;commitInfo&quot;-function.should show no tag if there is no tag" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>$USER_HOME$/.nvm/versions/node/v10.16.3/bin/node</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/tasks/task-tests/git.test.js</test-file>
+      <test-names>
+        <name value="utils/git" />
+        <name value="the &quot;commitInfo&quot;-function" />
+        <name value="should show no tag if there is no tag" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Grunt.js.run test" />
+      <item itemvalue="Gulp.js.Unnamed" />
+      <item itemvalue="Mocha.run task tests" />
+      <item itemvalue="Mocha.utils/git" />
+      <item itemvalue="Mocha.utils/git.the &quot;commitInfo&quot;-function.should show no tag if there is no tag" />
+      <item itemvalue="Mocha.security issues.GH-1495: Prevent Remote Code Execution via constructor.should not allow constructors to be accessed" />
+      <item itemvalue="Node.js.test.js" />
+      <item itemvalue="Node.js.scratch_5.js" />
+      <item itemvalue="Node.js.scratch_2.es6" />
+      <item itemvalue="Node.js.runner.js" />
+      <item itemvalue="Node.js.scratch_10.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mocha.security issues.GH-1495: Prevent Remote Code Execution via constructor.should not allow constructors to be accessed" />
+        <item itemvalue="Mocha.utils/git" />
+        <item itemvalue="Mocha.utils/git.the &quot;commitInfo&quot;-function.should show no tag if there is no tag" />
+        <item itemvalue="Node.js.scratch_10.js" />
+        <item itemvalue="Node.js.runner.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c0fc72b-c0e0-4457-85a6-46bc8c071ed6" name="Default Changelist" comment="" />
+      <created>1545434354961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545434354961</updated>
+      <workItem from="1561839214811" duration="1026000" />
+      <workItem from="1561840284256" duration="1188000" />
+      <workItem from="1561883739045" duration="1725000" />
+      <workItem from="1562093684096" duration="116000" />
+      <workItem from="1563528102348" duration="9000" />
+      <workItem from="1567211287988" duration="3324000" />
+      <workItem from="1567246992410" duration="3353000" />
+      <workItem from="1567266004306" duration="16305000" />
+      <workItem from="1567536645919" duration="6207000" />
+      <workItem from="1567708636782" duration="4709000" />
+      <workItem from="1568057022152" duration="1791000" />
+      <workItem from="1568537929717" duration="1334000" />
+      <workItem from="1568665751530" duration="2597000" />
+      <workItem from="1568668428862" duration="2305000" />
+      <workItem from="1568751023962" duration="1614000" />
+      <workItem from="1568833582421" duration="7181000" />
+      <workItem from="1568998510363" duration="2396000" />
+      <workItem from="1569054547051" duration="20741000" />
+      <workItem from="1569088478442" duration="602000" />
+      <workItem from="1569303095414" duration="2434000" />
+      <workItem from="1569306872825" duration="1105000" />
+      <workItem from="1569356706799" duration="7236000" />
+      <workItem from="1569524847288" duration="1163000" />
+      <workItem from="1569526034015" duration="9754000" />
+      <workItem from="1569562608406" duration="1551000" />
+      <workItem from="1569657529468" duration="2239000" />
+      <workItem from="1569669711049" duration="4083000" />
+      <workItem from="1569761212984" duration="4884000" />
+      <workItem from="1569784765651" duration="3022000" />
+      <workItem from="1569788352477" duration="2990000" />
+      <workItem from="1569869522682" duration="11000" />
+      <workItem from="1570040865598" duration="1492000" />
+      <workItem from="1570044076433" duration="6321000" />
+      <workItem from="1570137678759" duration="1676000" />
+      <workItem from="1570207432850" duration="645000" />
+      <workItem from="1570210008787" duration="18000" />
+      <workItem from="1570559075450" duration="7701000" />
+      <workItem from="1570896841831" duration="2310000" />
+      <workItem from="1571327109318" duration="5952000" />
+      <workItem from="1571555170186" duration="14000" />
+      <workItem from="1571582771022" duration="16957000" />
+      <workItem from="1571689750107" duration="1108000" />
+      <workItem from="1572033619516" duration="1224000" />
+      <workItem from="1572071723620" duration="608000" />
+      <workItem from="1572183424050" duration="131000" />
+      <workItem from="1572189518400" duration="3000" />
+      <workItem from="1572190374362" duration="1496000" />
+      <workItem from="1572192005566" duration="154000" />
+      <workItem from="1572192225459" duration="2013000" />
+      <workItem from="1572207566671" duration="175000" />
+      <workItem from="1572214270583" duration="766000" />
+      <workItem from="1572282480349" duration="8303000" />
+      <workItem from="1572322203064" duration="3406000" />
+      <workItem from="1572379169086" duration="222000" />
+      <workItem from="1572382847613" duration="629000" />
+      <workItem from="1572469667848" duration="1946000" />
+      <workItem from="1572549568596" duration="213000" />
+      <workItem from="1572554947626" duration="20000" />
+      <workItem from="1572555024047" duration="92000" />
+      <workItem from="1572642637958" duration="2072000" />
+      <workItem from="1572681999164" duration="395000" />
+      <workItem from="1572706402187" duration="76000" />
+      <workItem from="1572708263327" duration="490000" />
+      <workItem from="1572716152060" duration="3094000" />
+      <workItem from="1572722132167" duration="437000" />
+      <workItem from="1572793801254" duration="5715000" />
+      <workItem from="1572807855110" duration="6853000" />
+      <workItem from="1572882847613" duration="3198000" />
+      <workItem from="1572894093692" duration="11059000" />
+      <workItem from="1572984078736" duration="2151000" />
+      <workItem from="1573156759013" duration="37000" />
+      <workItem from="1573278302052" duration="4050000" />
+      <workItem from="1573368161963" duration="2447000" />
+      <workItem from="1573396739169" duration="9248000" />
+      <workItem from="1573540581708" duration="669000" />
+      <workItem from="1573673666317" duration="6832000" />
+      <workItem from="1573715278160" duration="2411000" />
+      <workItem from="1573717921762" duration="332000" />
+      <workItem from="1573830085016" duration="4951000" />
+      <workItem from="1573836888253" duration="997000" />
+      <workItem from="1573970540537" duration="7373000" />
+      <workItem from="1573999765445" duration="4320000" />
+      <workItem from="1574007800899" duration="8457000" />
+      <workItem from="1574024760196" duration="787000" />
+      <workItem from="1574043952395" duration="3717000" />
+      <workItem from="1574058770151" duration="2633000" />
+      <workItem from="1574522976950" duration="15000" />
+      <workItem from="1574523221014" duration="16405000" />
+      <workItem from="1574712653823" duration="6598000" />
+      <workItem from="1574719268301" duration="113000" />
+      <workItem from="1574801110217" duration="5995000" />
+      <workItem from="1575126239841" duration="5179000" />
+      <workItem from="1575149853698" duration="9509000" />
+      <workItem from="1575194020962" duration="8044000" />
+      <workItem from="1575320037973" duration="6378000" />
+      <workItem from="1575406517187" duration="5414000" />
+      <workItem from="1575529223057" duration="187000" />
+      <workItem from="1575786593615" duration="1258000" />
+      <workItem from="1575813360334" duration="4337000" />
+      <workItem from="1575921100748" duration="290000" />
+      <workItem from="1575923748616" duration="1942000" />
+      <workItem from="1576099214610" duration="12000" />
+      <workItem from="1576099378197" duration="9206000" />
+      <workItem from="1576179480388" duration="8815000" />
+      <workItem from="1576267236840" duration="5702000" />
+      <workItem from="1576277469958" duration="7134000" />
+      <workItem from="1576308233167" duration="11363000" />
+      <workItem from="1576523101477" duration="6029000" />
+      <workItem from="1576613330603" duration="9616000" />
+      <workItem from="1576700302281" duration="8787000" />
+      <workItem from="1576736435385" duration="2881000" />
+      <workItem from="1576789900845" duration="4401000" />
+      <workItem from="1576825766457" duration="11622000" />
+      <workItem from="1576963719947" duration="27000" />
+      <workItem from="1577909660260" duration="4602000" />
+      <workItem from="1577919378375" duration="4063000" />
+      <workItem from="1577974034744" duration="5883000" />
+      <workItem from="1577994575015" duration="507000" />
+      <workItem from="1577995110797" duration="11000" />
+      <workItem from="1577998078879" duration="2051000" />
+      <workItem from="1578519545346" duration="4571000" />
+      <workItem from="1578599307038" duration="9646000" />
+      <workItem from="1578665424036" duration="8254000" />
+      <workItem from="1578829193318" duration="2602000" />
+      <workItem from="1578946881328" duration="2665000" />
+      <workItem from="1579638781948" duration="1783000" />
+      <workItem from="1579641791050" duration="567000" />
+      <workItem from="1579727388692" duration="21000" />
+      <workItem from="1579728960876" duration="2754000" />
+      <workItem from="1579968604412" duration="12000" />
+      <workItem from="1579983415242" duration="2477000" />
+      <workItem from="1580850012218" duration="373000" />
+      <workItem from="1580855446188" duration="1773000" />
+      <workItem from="1580878572666" duration="27000" />
+      <workItem from="1580879067737" duration="779000" />
+      <workItem from="1581163079347" duration="44000" />
+      <workItem from="1582411097682" duration="3733000" />
+      <workItem from="1582451155037" duration="771000" />
+    </task>
+    <task id="LOCAL-00175" summary="fixup: next test">
+      <created>1576276357183</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1576276357183</updated>
+    </task>
+    <task id="LOCAL-00176" summary="fixup: next test">
+      <created>1576276631347</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1576276631347</updated>
+    </task>
+    <task id="LOCAL-00177" summary="test/style: refactor remaining grunt tasks to use promises instead of callbacks">
+      <created>1576284597410</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1576284597410</updated>
+    </task>
+    <task id="LOCAL-00178" summary="test/style: remove or hide unused code in git.js, add tests">
+      <created>1576341582715</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1576341582716</updated>
+    </task>
+    <task id="LOCAL-00179" summary="test/style: remove or hide unused code in git.js, add tests">
+      <created>1576341766797</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1576341766797</updated>
+    </task>
+    <task id="LOCAL-00180" summary="chore: disable &quot;dot-notation&quot; rule&#10;&#10;- I don't think it makes much sense. In some cases, &#10;  it is more readable to wrap property access in quotes,&#10;  some times not, but there is no universal rule&#10;  for that. &#10;- a promises &quot;catch&quot;-function should not be wrapped, but it has to&#10;  be, if &quot;allow-keywords&quot; is set to false&#10;- an &quot;if&quot;-helper should be wrapped, but it is not allowed to be &#10;  if &quot;allow-keywords&quot; is set to true (default).">
+      <created>1576342090327</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1576342090327</updated>
+    </task>
+    <task id="LOCAL-00181" summary="chore: ignore .nyc_output">
+      <created>1576342184834</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1576342184834</updated>
+    </task>
+    <task id="LOCAL-00182" summary="Merge branch '4.x'&#10;&#10;# Conflicts:&#10;#&#9;Gruntfile.js&#10;#&#9;package-lock.json&#10;#&#9;package.json">
+      <created>1576345588591</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1576345588591</updated>
+    </task>
+    <task id="LOCAL-00183" summary="fix: disallow prototype properties completely (part 1)&#10;&#10;- lookup-helper must do the same thing, but it does not yet&#10;&#10;BREAKING CHANGE:&#10;- access to prototype properties is forbidden completely&#10;  (except for the &quot;length&quot;-property if it is a function)">
+      <created>1576529098076</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1576529098077</updated>
+    </task>
+    <task id="LOCAL-00184" summary="wip: try to get lookup helper to use th same property-check code as compiler&#10;start fixing property-check in decorator code (where there are no aliases)">
+      <created>1576618631483</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1576618631484</updated>
+    </task>
+    <task id="LOCAL-00185" summary="another attempt to unify the lookupProperty code">
+      <created>1576622942056</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1576622942056</updated>
+    </task>
+    <task id="LOCAL-00186" summary="fixup: wrap lookup helper to pass lookupProperty function as option&#10;(works with old precompiled templates as well)">
+      <created>1576709081919</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1576709081920</updated>
+    </task>
+    <task id="LOCAL-00187" summary="fixup: fix test coverage and, only inject lookupProperty-function in &#10; template if necessary">
+      <created>1576739385000</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1576739385004</updated>
+    </task>
+    <task id="LOCAL-00188" summary="feat: add options to whitelist prototype property / restrict compat mode as well. &#10;&#10;- allowProtoProperties - Object &quot;string&quot;-&gt;&quot;boolean&quot; to allow specific prototype non-methods&#10;- allowProtoMethods - Object &quot;string&quot;-&gt;&quot;boolean&quot; to allow specific prototype methods">
+      <created>1576834989855</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1576834989856</updated>
+    </task>
+    <task id="LOCAL-00189" summary="revert chore changes">
+      <created>1576835283260</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835283260</updated>
+    </task>
+    <task id="LOCAL-00190" summary="add test, fixup">
+      <created>1576835590681</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1576835590681</updated>
+    </task>
+    <task id="LOCAL-00191" summary="test: show diff when test:bin fails">
+      <created>1577910087158</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1577910087159</updated>
+    </task>
+    <task id="LOCAL-00192" summary="fixup">
+      <created>1577910096601</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1577910096601</updated>
+    </task>
+    <task id="LOCAL-00193" summary="fix: fix use-case &quot;new template&quot; with &quot;old runtime&quot;">
+      <created>1577923245304</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1577923245305</updated>
+    </task>
+    <task id="LOCAL-00194" summary="fixup">
+      <created>1577976342491</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1577976342491</updated>
+    </task>
+    <task id="LOCAL-00195" summary="test: add path to nodeJs when running test:bin&#10;&#10;- this allows the test to be run in a debugger&#10;  without the complete PATH">
+      <created>1577976431515</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1577976431515</updated>
+    </task>
+    <task id="LOCAL-00196" summary="fixup: revert changes that belong into another commit">
+      <created>1577976519800</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1577976519800</updated>
+    </task>
+    <task id="LOCAL-00197" summary="refactor: fix typo in private test method">
+      <created>1577976583426</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1577976583426</updated>
+    </task>
+    <task id="LOCAL-00198" summary="fixup">
+      <created>1577977006428</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1577977006428</updated>
+    </task>
+    <task id="LOCAL-00199" summary="fixup">
+      <created>1577977397268</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1577977397268</updated>
+    </task>
+    <task id="LOCAL-00200" summary="fixup">
+      <created>1577977447192</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1577977447192</updated>
+    </task>
+    <task id="LOCAL-00201" summary="fixup">
+      <created>1577977541271</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1577977541271</updated>
+    </task>
+    <task id="LOCAL-00202" summary="fixup">
+      <created>1577977601175</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1577977601176</updated>
+    </task>
+    <task id="LOCAL-00203" summary="fixup">
+      <created>1577977647284</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1577977647284</updated>
+    </task>
+    <task id="LOCAL-00204" summary="fixup">
+      <created>1577978384966</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1577978384966</updated>
+    </task>
+    <task id="LOCAL-00205" summary="fixup">
+      <created>1577978471056</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1577978471056</updated>
+    </task>
+    <task id="LOCAL-00206" summary="fixup">
+      <created>1577978837963</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1577978837963</updated>
+    </task>
+    <task id="LOCAL-00207" summary="fixup: remove unnecessary null-check">
+      <created>1578519568445</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1578519568445</updated>
+    </task>
+    <task id="LOCAL-00208" summary="fixup: do not write &quot;length&quot; to wrapped helper functions&#10;&#10;- does not work in IE">
+      <created>1578520556997</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1578520556998</updated>
+    </task>
+    <task id="LOCAL-00209" summary="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean) and &#10;- `allowProtoMethodsBydefault` (boolean)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methode">
+      <created>1578607235264</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1578607235264</updated>
+    </task>
+    <task id="LOCAL-00210" summary="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean) and &#10;- `allowProtoMethodsBydefault` (boolean)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods 'constructor', '__defineGetter__', '__defineSetter__', '__lookupGetter__'&#10;and the property '__proto__' will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options.">
+      <created>1578608385151</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1578608385151</updated>
+    </task>
+    <task id="LOCAL-00211" summary="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean) and &#10;- `allowProtoMethodsByDefault` (boolean)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods 'constructor', '__defineGetter__', '__defineSetter__', '__lookupGetter__'&#10;and the property '__proto__' will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options.">
+      <created>1578609311755</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1578609311755</updated>
+    </task>
+    <task id="LOCAL-00212" summary="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean, default: false) and &#10;- `allowProtoMethodsByDefault` (boolean, default: false)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods `constructor`, `__defineGetter__`, `__defineSetter__`, `__lookupGetter__`&#10;and the property `__proto__` will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options.">
+      <created>1578610233998</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1578610233998</updated>
+    </task>
+    <task id="LOCAL-00213" summary="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean, default: false) and &#10;- `allowProtoMethodsByDefault` (boolean, default: false)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods `constructor`, `__defineGetter__`, `__defineSetter__`, `__lookupGetter__`&#10;and the property `__proto__` will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options.&#10;&#10;A warning is logged when the a proto-access it attempted and denied &#10;by default (i.e. if no option is set by the user to make the access&#10;decision explicit)">
+      <created>1578669067866</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1578669067866</updated>
+    </task>
+    <task id="LOCAL-00214" summary="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean, default: false) and &#10;- `allowProtoMethodsByDefault` (boolean, default: false)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods `constructor`, `__defineGetter__`, `__defineSetter__`, `__lookupGetter__`&#10;and the property `__proto__` will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options.&#10;&#10;A warning is logged when the a proto-access it attempted and denied &#10;by default (i.e. if no option is set by the user to make the access&#10;decision explicit)">
+      <created>1578670774608</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1578670774609</updated>
+    </task>
+    <task id="LOCAL-00215" summary="fix: use &quot;logger&quot; instead of console.error&#10;&#10;... to be graceful with older browser without &quot;console&quot;">
+      <created>1578672325727</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1578672325727</updated>
+    </task>
+    <task id="LOCAL-00216" summary="fix: log error for illegal property access only once per property">
+      <created>1578830819410</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1578830819411</updated>
+    </task>
+    <task id="LOCAL-00217" summary="fix: fix log output in case of illegal property access&#10;&#10;- fix link url to handlebarsjs.com">
+      <created>1578830961328</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1578830961328</updated>
+    </task>
+    <task id="LOCAL-00218" summary="fix: don't wrap helpers that are not functions&#10;&#10;- helpers should always be a function, but in #1639 one seems to &#10;  be undefined. This was not a problem before 4.6 because helpers&#10;  weren't wrapped then. &#10;  Now, we must take care only to wrap helpers (when adding&#10;  the &quot;lookupProperty&quot; function to the options), if they&#10;  are really functions.">
+      <created>1578947944299</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1578947944300</updated>
+    </task>
+    <task id="LOCAL-00219" summary="chore: execute saucelabs-task only if access-key exists&#10;&#10;- up to now, the existance of the SAUCE_USERNAME was checked &#10;  but this variable is even present in pull-requests from other&#10;  repos. This means that builds fail, because the access key&#10;  is not there.&#10;  This change looks for SAUCE_ACCESS_KEY instead, which is &#10;  a secure variable, only present in build originating from&#10;  the handlebars.js repo.">
+      <created>1578948474427</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1578948474428</updated>
+    </task>
+    <task id="LOCAL-00220" summary="chore: add missing &quot;await&quot; in aws-s3 publishing code&#10;&#10;closes #1644">
+      <created>1579639946167</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1579639946168</updated>
+    </task>
+    <task id="LOCAL-00221" summary="update package-lock.json">
+      <created>1582412150316</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1582412150317</updated>
+    </task>
+    <task id="LOCAL-00222" summary="backport fixes from 4.x">
+      <created>1582414779348</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1582414779348</updated>
+    </task>
+    <task id="LOCAL-00223" summary="backport fixes from 4.x">
+      <created>1582414813811</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1582414813811</updated>
+    </task>
+    <option name="localTasksCounter" value="224" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/node_modules/aws-sdk/scripts/services-table-generator.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="4.x" />
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/home/nknappmeier/projects/handlebars/handlebars.js/integration-testing/webpack-babel-test" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="COLUMN_WIDTH">
+                <map>
+                  <entry key="2" value="118" />
+                  <entry key="3" value="128" />
+                </map>
+              </option>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="4.x" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="rebuild" />
+                  <option value="master" />
+                  <option value="4.x" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="eslint-prettier" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                  <option value="4.x" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="PR-1600" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="!unsafe-function-calls" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/merge-4.x" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="!4.x" />
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="3.x" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="RELOAD_CONTEXT" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+      <path value="$PROJECT_DIR$/../spec/mustache" />
+    </ignored-roots>
+    <MESSAGE value="revert chore changes" />
+    <MESSAGE value="add test, fixup" />
+    <MESSAGE value="feat: whitelist options for accessing prototype properties of the context&#10; &#10;- disallow access to prototype properties and methods by default&#10;- add &quot;lookupProperty&quot;-method to the container&#10;  - this method is equivalent to &quot;parent[propertyName]&quot;, but&#10;    checks the property with &quot;hasOwnProperty&quot; by default.&#10;  - a whitelist for properties that are functions can be configured&#10;    via the &quot;allowProtoMethods&quot; runtime-option&#10;  - a whitelist for properties that are not functions can be configured&#10;    via the &quot;allowProtoProperties&quot; runtime-option&#10;- use &quot;lookupProperty&quot; to resolve child-properties in&#10;  - JavaScriptCompiler#nameLookup&#10;  - The &quot;lookup&quot;-helper (passed in the &quot;options&quot;-parameter)&#10;  - The &quot;lookup&quot; function at the container, which is used for&#10;    recursive lookups in &quot;compat&quot; mode&#10;- maintain compatibility of old templates with new runtimes&#10;  - the &quot;lookup&quot;-helper is called from the template, but old templates don't&#10;    pass the &quot;lookupProperty&quot;-function. That's why the lookup-helper is wrapped&#10;    in another function that adds &quot;lookupProperty&quot; to the &quot;options&quot;-parameter.&#10;- maintain compatibility of new template with old runtimes&#10;  - A fallback methods is included into the template and used if &quot;container.lookupProperty&quot;&#10;    does not exist. This method does not use a whitelist, but checks &quot;hasOwnProperty&quot; directly&#10;&#10;BREAKING CHANGE:&#10;- access to prototype properties is forbidden completely" />
+    <MESSAGE value="test: show diff when test:bin fails" />
+    <MESSAGE value="fix: fix use-case &quot;new template&quot; with &quot;old runtime&quot;" />
+    <MESSAGE value="test: add path to nodeJs when running test:bin&#10;&#10;- this allows the test to be run in a debugger&#10;  without the complete PATH" />
+    <MESSAGE value="fixup: revert changes that belong into another commit" />
+    <MESSAGE value="refactor: fix typo in private test method" />
+    <MESSAGE value="fixup" />
+    <MESSAGE value="feat: access control to prototype properties via whitelist&#10; &#10;Disallow access to prototype properties and methods by default. &#10;Access to properties is always checked via &#10;`Object.prototype.hasOwnProperty.call(parent, propertyName)`.&#10;&#10;New runtime options:&#10;- **allowedProtoMethods**: a string-to-boolean map of property-names that are allowed if they are methods of the parent object.&#10;- **allowedProtoProperties**: a string-to-boolean map of property-names that are allowed if they are properties but not methods of the parent object.&#10;&#10;```js&#10;const template = handlebars.compile('{{aString.trim}}')&#10;const result = template({ aString: '  abc  ' })&#10;// result is empty, because trim is defined at String prototype&#10;```&#10;&#10;&#10;```js&#10;const template = handlebars.compile('{{aString.trim}}')&#10;const result = template({ aString: '  abc  ' }, {&#10;  allowedProtoMethods: {&#10;    trim: true&#10;  }&#10;})&#10;// result = 'abc'&#10;```&#10;&#10;Implementation details: The method now &quot;container.lookupProperty&quot;&#10;handles the prototype-checks and the white-lists. It is used in&#10;- JavaScriptCompiler#nameLookup&#10;- The &quot;lookup&quot;-helper (passed to all helpers as &quot;options.lookupProperty&quot;)&#10;- The &quot;lookup&quot; function at the container, which is used for recursive lookups in &quot;compat&quot; mode&#10;&#10;Compatibility:&#10;- **Old precompiled templates work with new runtimes**: The &quot;options.lookupPropery&quot;-function is passed to the helper by a wrapper, not by the compiled templated.&#10;- **New templates work with old runtimes**: The template contains a function that is used as fallback if the &quot;lookupProperty&quot;-function cannot be found at the container. However, the runtime-options &quot;allowedProtoProperties&quot; and &quot;allowedProtoMethods&quot; only work with the newest runtime.&#10;&#10;BREAKING CHANGE:&#10;- access to prototype properties is forbidden completely by default" />
+    <MESSAGE value="fixup: remove unnecessary null-check" />
+    <MESSAGE value="fixup: do not write &quot;length&quot; to wrapped helper functions&#10;&#10;- does not work in IE" />
+    <MESSAGE value="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean) and &#10;- `allowProtoMethodsBydefault` (boolean)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methode" />
+    <MESSAGE value="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean) and &#10;- `allowProtoMethodsBydefault` (boolean)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods 'constructor', '__defineGetter__', '__defineSetter__', '__lookupGetter__'&#10;and the property '__proto__' will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options." />
+    <MESSAGE value="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean) and &#10;- `allowProtoMethodsByDefault` (boolean)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods 'constructor', '__defineGetter__', '__defineSetter__', '__lookupGetter__'&#10;and the property '__proto__' will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options." />
+    <MESSAGE value="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean, default: false) and &#10;- `allowProtoMethodsByDefault` (boolean, default: false)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods `constructor`, `__defineGetter__`, `__defineSetter__`, `__lookupGetter__`&#10;and the property `__proto__` will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options." />
+    <MESSAGE value="feat: default options for controlling proto access&#10;&#10;This commmit adds the runtime options &#10;- `allowProtoPropertiesByDefault` (boolean, default: false) and &#10;- `allowProtoMethodsByDefault` (boolean, default: false)`&#10;which can be used to allow access to prototype properties and&#10;functions in general.&#10;&#10;Specific properties and methods can still be disabled from access&#10;via `allowedProtoProperties` and `allowedProtoMethods` by &#10;setting the corresponding values to false.&#10;&#10;The methods `constructor`, `__defineGetter__`, `__defineSetter__`, `__lookupGetter__`&#10;and the property `__proto__` will be disabled, even if the allow...ByDefault-options&#10;are set to true. In order to allow access to those properties and methods, they have&#10;to be explicitly set to true in the 'allowedProto...'-options.&#10;&#10;A warning is logged when the a proto-access it attempted and denied &#10;by default (i.e. if no option is set by the user to make the access&#10;decision explicit)" />
+    <MESSAGE value="fix: use &quot;logger&quot; instead of console.error&#10;&#10;... to be graceful with older browser without &quot;console&quot;" />
+    <MESSAGE value="fix: log error for illegal property access only once per property" />
+    <MESSAGE value="fix: fix log output in case of illegal property access&#10;&#10;- fix link url to handlebarsjs.com" />
+    <MESSAGE value="fix: don't wrap helpers that are not functions&#10;&#10;- helpers should always be a function, but in #1639 one seems to &#10;  be undefined. This was not a problem before 4.6 because helpers&#10;  weren't wrapped then. &#10;  Now, we must take care only to wrap helpers (when adding&#10;  the &quot;lookupProperty&quot; function to the options), if they&#10;  are really functions." />
+    <MESSAGE value="chore: execute saucelabs-task only if access-key exists&#10;&#10;- up to now, the existance of the SAUCE_USERNAME was checked &#10;  but this variable is even present in pull-requests from other&#10;  repos. This means that builds fail, because the access key&#10;  is not there.&#10;  This change looks for SAUCE_ACCESS_KEY instead, which is &#10;  a secure variable, only present in build originating from&#10;  the handlebars.js repo." />
+    <MESSAGE value="chore: add missing &quot;await&quot; in aws-s3 publishing code&#10;&#10;closes #1644" />
+    <MESSAGE value="update package-lock.json" />
+    <MESSAGE value="backport fixes from 4.x" />
+    <option name="LAST_COMMIT_MESSAGE" value="backport fixes from 4.x" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="235" y="187" width="804" height="667" key="#ESLint" timestamp="1576339436582">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="235" y="187" width="804" height="667" key="#ESLint/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576339436582" />
+    <state x="1698" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578668823743">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1698" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577975542509" />
+    <state x="282" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1366.743@0.25.1366.743" timestamp="1576704020640" />
+    <state x="1698" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578668823743" />
+    <state x="1378" y="100" width="1724" height="882" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1576338055403">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1378" y="100" width="1724" height="882" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576338055403" />
+    <state x="1973" y="341" width="522" height="379" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576308574873">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1973" y="341" width="522" height="379" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576308574873" />
+    <state x="2023" y="249" width="428" height="574" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1576101499434">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2023" y="249" width="428" height="574" key="#com.intellij.ide.macro.MacrosDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576101499434" />
+    <state x="310" y="78" width="739" height="628" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1576703548613">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state x="310" y="78" width="739" height="628" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.25.1366.743@0.25.1366.743" timestamp="1576703548613" />
+    <state x="2122" y="245" width="966" height="592" key="#xdebugger.evaluate" timestamp="1577975366756">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2122" y="245" width="966" height="592" key="#xdebugger.evaluate/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577975366756" />
+    <state x="379" y="25" width="812" height="999" key="CommitChangelistDialog2" timestamp="1582414813715">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="379" y="99" key="CommitChangelistDialog2/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1576276354540" />
+    <state x="1848" y="81" width="1280" height="999" key="CommitChangelistDialog2/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577978834921" />
+    <state x="404" y="25" width="915" height="733" key="CommitChangelistDialog2/0.25.1366.743@0.25.1366.743" timestamp="1579639943376" />
+    <state x="379" y="25" width="812" height="999" key="CommitChangelistDialog2/3200.0.1366.768/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1582414813715" />
+    <state x="1848" y="81" width="866" height="795" key="CommitChangelistDialog2/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578830958963" />
+    <state x="178" y="98" width="1096" height="634" key="DiffContextDialog" timestamp="1582414750813">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="0" y="25" width="1280" height="999" maximized="true" key="DiffContextDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577978380480" />
+    <state x="264" y="79" width="1096" height="614" key="DiffContextDialog/0.25.1366.743@0.25.1366.743" timestamp="1580879656661" />
+    <state x="178" y="98" width="1096" height="634" key="DiffContextDialog/3200.0.1366.768/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1582414750813" />
+    <state x="1886" y="79" width="1096" height="634" key="DiffContextDialog/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578670762648" />
+    <state x="1977" y="305" width="519" height="461" key="EnvironmentVariablesDialog" timestamp="1577920788139">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1977" y="305" width="519" height="461" key="EnvironmentVariablesDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577920788139" />
+    <state x="0" y="25" width="1366" height="743" key="FileChooserDialogImpl" timestamp="1581163117535">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state x="2023" y="299" width="428" height="474" key="FileChooserDialogImpl/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576835318076" />
+    <state x="0" y="25" width="1366" height="743" key="FileChooserDialogImpl/0.25.1366.743/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1581163117535" />
+    <state x="-2" y="25" width="1370" height="745" key="FileChooserDialogImpl/0.25.1366.743@0.25.1366.743" timestamp="1576963744370" />
+    <state x="0" y="25" width="1280" height="1024" key="FileChooserDialogImpl/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578599373766" />
+    <state x="2017" y="447" width="727" height="529" key="GitRewordDialog" timestamp="1577980140713">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2017" y="447" width="727" height="529" key="GitRewordDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980140713" />
+    <state width="774" height="370" key="GridCell.Tab.0.bottom" timestamp="1578831795773">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="675" height="58" key="GridCell.Tab.0.bottom/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1575925690992" />
+    <state width="704" height="428" key="GridCell.Tab.0.bottom/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507013" />
+    <state width="250" height="348" key="GridCell.Tab.0.bottom/0.25.1366.743@0.25.1366.743" timestamp="1576739399099" />
+    <state width="774" height="370" key="GridCell.Tab.0.bottom/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578831795773" />
+    <state width="774" height="370" key="GridCell.Tab.0.center" timestamp="1578831795773">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="675" height="58" key="GridCell.Tab.0.center/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1575925690992" />
+    <state width="704" height="428" key="GridCell.Tab.0.center/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507013" />
+    <state width="250" height="348" key="GridCell.Tab.0.center/0.25.1366.743@0.25.1366.743" timestamp="1576739399098" />
+    <state width="774" height="370" key="GridCell.Tab.0.center/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578831795773" />
+    <state width="774" height="370" key="GridCell.Tab.0.left" timestamp="1578831795773">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="675" height="58" key="GridCell.Tab.0.left/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1575925690992" />
+    <state width="704" height="428" key="GridCell.Tab.0.left/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507013" />
+    <state width="250" height="348" key="GridCell.Tab.0.left/0.25.1366.743@0.25.1366.743" timestamp="1576739399098" />
+    <state width="774" height="370" key="GridCell.Tab.0.left/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578831795773" />
+    <state width="774" height="370" key="GridCell.Tab.0.right" timestamp="1578831795773">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="675" height="58" key="GridCell.Tab.0.right/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1575925690992" />
+    <state width="704" height="428" key="GridCell.Tab.0.right/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507013" />
+    <state width="250" height="348" key="GridCell.Tab.0.right/0.25.1366.743@0.25.1366.743" timestamp="1576739399098" />
+    <state width="774" height="370" key="GridCell.Tab.0.right/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578831795773" />
+    <state width="704" height="319" key="GridCell.Tab.1.bottom" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.1.bottom/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507013" />
+    <state width="704" height="319" key="GridCell.Tab.1.bottom/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.1.center" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.1.center/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507013" />
+    <state width="704" height="319" key="GridCell.Tab.1.center/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.1.left" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.1.left/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507013" />
+    <state width="704" height="319" key="GridCell.Tab.1.left/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.1.right" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.1.right/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507013" />
+    <state width="704" height="319" key="GridCell.Tab.1.right/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.2.bottom" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.2.bottom/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507014" />
+    <state width="704" height="319" key="GridCell.Tab.2.bottom/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.2.center" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.2.center/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507014" />
+    <state width="704" height="319" key="GridCell.Tab.2.center/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.2.left" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.2.left/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507014" />
+    <state width="704" height="319" key="GridCell.Tab.2.left/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.2.right" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.2.right/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507014" />
+    <state width="704" height="319" key="GridCell.Tab.2.right/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.3.bottom" timestamp="1578610273446">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.3.bottom/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507014" />
+    <state width="704" height="319" key="GridCell.Tab.3.bottom/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273446" />
+    <state width="704" height="319" key="GridCell.Tab.3.center" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.3.center/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507014" />
+    <state width="704" height="319" key="GridCell.Tab.3.center/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.3.left" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.3.left/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507014" />
+    <state width="704" height="319" key="GridCell.Tab.3.left/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state width="704" height="319" key="GridCell.Tab.3.right" timestamp="1578610273445">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state width="704" height="428" key="GridCell.Tab.3.right/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980507014" />
+    <state width="704" height="319" key="GridCell.Tab.3.right/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578610273445" />
+    <state x="0" y="25" width="1096" height="614" key="MergeDialog" timestamp="1580879616406">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state x="0" y="25" width="1280" height="999" key="MergeDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576345532555" />
+    <state x="0" y="25" width="1096" height="614" key="MergeDialog/0.25.1366.743@0.25.1366.743" timestamp="1580879616406" />
+    <state x="0" y="0" width="1280" height="1024" key="MergeDialog/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578525448547" />
+    <state x="479" y="203" width="568" height="553" key="MultipleFileMergeDialog" timestamp="1580879616418">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state x="1953" y="259" width="568" height="553" key="MultipleFileMergeDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576345532564" />
+    <state x="479" y="203" width="568" height="553" key="MultipleFileMergeDialog/0.25.1366.743@0.25.1366.743" timestamp="1580879616418" />
+    <state x="1953" y="259" width="568" height="553" key="MultipleFileMergeDialog/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578672355883" />
+    <state x="2015" y="249" width="437" height="563" key="RollbackChangesDialog" timestamp="1577977144424">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2015" y="249" width="437" height="563" key="RollbackChangesDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577977144424" />
+    <state x="1744" y="19" width="1028" height="835" key="SettingsEditor" timestamp="1578829212849">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1744" y="176" key="SettingsEditor/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576181712397" />
+    <state x="330" y="38" key="SettingsEditor/0.25.1366.743@0.25.1366.743" timestamp="1576702950139" />
+    <state x="1744" y="19" width="1028" height="835" key="SettingsEditor/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578829212849" />
+    <state x="2030" y="247" width="437" height="645" key="VCS.ChangeListViewerDialog" timestamp="1577974356655">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2030" y="247" width="413" height="577" key="VCS.ChangeListViewerDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577974356655" />
+    <state x="534" y="113" width="437" height="645" key="VCS.ChangeListViewerDialog/0.25.1366.743@0.25.1366.743" timestamp="1576738083005" />
+    <state x="1765" y="432" width="938" height="197" key="VCS.ChangelistChooser" timestamp="1575406961347">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1765" y="432" width="938" height="197" key="VCS.ChangelistChooser/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1575406961347" />
+    <state x="1378" y="100" width="1724" height="882" key="VCS.FileHistoryDialog" timestamp="1575323942267">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1378" y="100" width="1724" height="882" key="VCS.FileHistoryDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1575323942267" />
+    <state x="370" y="282" width="804" height="518" key="Vcs.Push.Dialog.v2" timestamp="1582414818461">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="370" y="281" width="594" height="480" key="Vcs.Push.Dialog.v2/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1576276359251" />
+    <state x="1835" y="277" width="804" height="518" key="Vcs.Push.Dialog.v2/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577980149848" />
+    <state x="395" y="216" width="805" height="383" key="Vcs.Push.Dialog.v2/0.25.1366.743@0.25.1366.743" timestamp="1580879626113" />
+    <state x="370" y="282" width="804" height="518" key="Vcs.Push.Dialog.v2/3200.0.1366.768/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1582414818461" />
+    <state x="1835" y="277" width="804" height="518" key="Vcs.Push.Dialog.v2/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578831042218" />
+    <state x="2030" y="278" width="413" height="516" key="VcsDiffUtil.ChangesDialog" timestamp="1576835674226">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2030" y="278" width="413" height="516" key="VcsDiffUtil.ChangesDialog/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576835674226" />
+    <state x="1904" y="171" width="666" height="625" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578668937653">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1904" y="223" width="666" height="625" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576283499532" />
+    <state x="444" y="178" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1366.743@0.25.1366.743" timestamp="1576622637157" />
+    <state x="1904" y="171" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578668937653" />
+    <state x="510" y="451" width="384" height="216" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582451169054">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="2045" y="461" width="384" height="150" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577975974090" />
+    <state x="544" y="342" width="390" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1366.743@0.25.1366.743" timestamp="1580879550615" />
+    <state x="510" y="451" width="384" height="216" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/3200.0.1366.768/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1582451169054" />
+    <state x="2045" y="461" width="384" height="150" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578672359665" />
+    <state x="214" y="154" width="1284" height="1001" maximized="true" key="dock-window-1" timestamp="1576338707203">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="214" y="154" width="1284" height="1001" maximized="true" key="dock-window-1/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576338707203" />
+    <state x="418" y="284" width="666" height="713" key="find.popup" timestamp="1582411250577">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="418" y="285" width="666" height="520" key="find.popup/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1575924620735" />
+    <state x="1907" y="281" width="838" height="530" key="find.popup/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577974231225" />
+    <state x="446" y="218" width="666" height="530" key="find.popup/0.25.1366.743@0.25.1366.743" timestamp="1578946927037" />
+    <state x="418" y="284" width="666" height="713" key="find.popup/3200.0.1366.768/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1582411250577" />
+    <state x="1907" y="281" width="838" height="530" key="find.popup/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578672052519" />
+    <state x="2017" y="256" width="439" height="560" key="git4idea.branch.GitSmartOperationDialog" timestamp="1578670232756">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2017" y="256" width="439" height="560" key="git4idea.branch.GitSmartOperationDialog/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578670232756" />
+    <state x="1507" y="86" width="505" height="501" key="git4idea.rebase.GitRebaseEditor" timestamp="1578520931047">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1507" y="86" width="505" height="501" key="git4idea.rebase.GitRebaseEditor/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577978860026" />
+    <state x="1507" y="86" key="git4idea.rebase.GitRebaseEditor/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578520931047" />
+    <state x="1650" y="81" width="1280" height="999" key="git4idea.rebase.GitUnstructuredEditor" timestamp="1577923371287">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1650" y="81" width="1280" height="999" key="git4idea.rebase.GitUnstructuredEditor/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577923371287" />
+    <state x="1596" y="309" width="1243" height="536" key="new project wizard" timestamp="1581163119965">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1596" y="309" width="1243" height="536" key="new project wizard/0.25.1366.743/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1581163119965" />
+    <state x="1984" y="173" width="505" height="725" key="refactoring.ChangeSignatureDialog" timestamp="1578603650063">
+      <screen x="1280" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1984" y="173" width="505" height="725" key="refactoring.ChangeSignatureDialog/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578603650063" />
+    <state x="415" y="256" width="672" height="627" key="run.anything.popup" timestamp="1576826116623">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="415" y="256" width="672" height="627" key="run.anything.popup/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1576826116623" />
+    <state x="1902" y="250" width="672" height="677" key="run.anything.popup/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1576338767971" />
+    <state x="443" y="197" width="672" height="466" key="run.anything.popup/0.25.1366.743@0.25.1366.743" timestamp="1576739255985" />
+    <state x="415" y="246" width="672" height="628" key="search.everywhere.popup" timestamp="1582411866474">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="1903" y="238" width="945" height="679" key="search.everywhere.popup/0.0.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1579730338845" />
+    <state x="415" y="246" width="672" height="628" key="search.everywhere.popup/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1576826985911" />
+    <state x="1903" y="239" width="672" height="678" key="search.everywhere.popup/0.25.1280.999/1280.0.1920.1080@1280.0.1920.1080" timestamp="1577998096741" />
+    <state x="443" y="189" width="672" height="467" key="search.everywhere.popup/0.25.1366.743@0.25.1366.743" timestamp="1580879241126" />
+    <state x="415" y="246" width="672" height="628" key="search.everywhere.popup/3200.0.1366.768/0.25.1280.999/1280.0.1920.1080@0.25.1280.999" timestamp="1582411866474" />
+    <state x="1903" y="239" width="672" height="678" key="search.everywhere.popup/3200.312.1366.768/0.0.1280.1024/1280.0.1920.1080@1280.0.1920.1080" timestamp="1578831721710" />
+  </component>
+</project>
